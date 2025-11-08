@@ -11,7 +11,10 @@
   --orange-300: #ff8a57;
   --orange-500: #ff4d00;
 }
-
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--orange-500);
+}
 * {
   margin: 0;
   padding: 0;
