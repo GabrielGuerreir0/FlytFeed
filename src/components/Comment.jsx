@@ -1,6 +1,6 @@
 import { Avatar } from "./Avatar";
 import styles from "./Comment.module.css";
-export function Comment() {
+export function Comment({ content }) {
   return (
     <div className={styles.comment}>
       <Avatar
@@ -21,7 +21,7 @@ export function Comment() {
             </div>
             <button title="Deletar comentário">🗑️</button>
           </header>
-          <p>Muito bom Gabriel, parabens!🙌</p>
+          <p>{content}</p>
         </div>
         <footer>
           <button className={styles.likeButton}>
