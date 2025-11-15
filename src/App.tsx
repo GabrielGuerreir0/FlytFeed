@@ -3,7 +3,15 @@ import styles from "./App.module.css";
 import { Post } from "./components/Post";
 import { Sidebar } from "./components/Sidebar";
 
-const posts = [
+type Content = { type: "paragraph" | "link"; content: string };
+type PostType = {
+  id: number;
+  author: { avatar: string; name: string; role: string };
+  content: Content[];
+  publishedAt: Date;
+};
+
+const posts: PostType[] = [
   {
     id: 1,
     author: {
